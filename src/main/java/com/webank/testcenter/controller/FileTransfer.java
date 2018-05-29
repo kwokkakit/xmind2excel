@@ -40,20 +40,27 @@ public class FileTransfer {
     }
 
     @RequestMapping(value = "upload.do")
-    public ModelAndView dealFileUpload(@RequestParam(value = "file") CommonsMultipartFile file)  {
+    public ModelAndView dealFileUpload(@RequestParam(value = "file") CommonsMultipartFile file,HttpServletRequest request)  {
         //@RequestParam(value="file")与upload.jsp里面的name="file"标签对应，该标签里提交的是file类型内容
         System.out.println("run upload.do");
+        //获取当前时间戳作为文件另存的后缀
         long timestamp = System.currentTimeMillis();
+        //获取上传的文件名字
         String uploadFileName = file.getOriginalFilename();
         String fileType = uploadFileName.substring(uploadFileName.lastIndexOf(".")+1);
         System.out.println("上传的文件格式："+fileType);
+        //上传的文件格式必须为xmind
         if (!fileType.equals("xmind")){
+            //如果上传的文件后缀不为xmind则返回上传文件格式错误的页面
             ModelAndView mav = new ModelAndView("uploaderror");
             return mav;
         }
-        String savePath = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\";
+        //String savePath = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\";
+        //
+        String savePath = request.getSession().getServletContext().getRealPath("/myfile");
+        System.out.println("当前程序运行路径："+request.getSession().getServletContext().getRealPath("/myfile"));
         String saveFileName = uploadFileName.substring(0, uploadFileName.lastIndexOf(".")) + "_" + timestamp + "." + fileType;
-        String uploadFile = savePath+saveFileName;
+        String uploadFile = savePath+"\\"+saveFileName;
         File dirs = new File(savePath);
         if (!dirs.exists()) {
             dirs.mkdirs();
@@ -68,7 +75,7 @@ public class FileTransfer {
         //将xmind转换成excel
         //结果excel文件
         String caseFileName = uploadFileName.substring(0, uploadFileName.lastIndexOf("."))+"_"+timestamp+".xls";
-        String caseResultFile = savePath+uploadFileName.substring(0, uploadFileName.lastIndexOf("."))+"_"+timestamp+".xls";
+        String caseResultFile = savePath+"\\"+uploadFileName.substring(0, uploadFileName.lastIndexOf("."))+"_"+timestamp+".xls";
         ExcelHandler resultExcelHandler = new ExcelHandler(caseResultFile);
         resultExcelHandler.ExcelHandler();
 
@@ -88,8 +95,11 @@ public class FileTransfer {
     @RequestMapping(value = "download.do")
     public ResponseEntity<byte[]> download(HttpServletRequest request, @RequestParam(value = "filename") String filename) throws IOException {
         System.out.println("run download.do");
-        String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
+        //String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
+        //设置下载文件的绝对路径
+        String absoluteFile = request.getSession().getServletContext().getRealPath("/myfile")+"\\"+filename;
         File file = new File(absoluteFile);
+        //设置下载信息
         HttpHeaders headers = new HttpHeaders();
         String downloadFielName="";
         try {
