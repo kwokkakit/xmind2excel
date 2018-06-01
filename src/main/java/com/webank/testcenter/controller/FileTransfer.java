@@ -93,7 +93,7 @@ public class FileTransfer {
     }
 
     @RequestMapping(value = "download.do")
-    public ResponseEntity<byte[]> download(HttpServletRequest request, @RequestParam(value = "filename") String filename) throws IOException {
+    public ResponseEntity<byte[]> download(HttpServletRequest request, @RequestParam(value = "filename") String filename){
         System.out.println("run download.do");
         //String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
         //设置下载文件的绝对路径
@@ -109,6 +109,12 @@ public class FileTransfer {
         }
         headers.setContentDispositionFormData("attachment",downloadFielName);
         headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),headers,HttpStatus.CREATED);
+        byte[] bytes = new byte[]{};
+        try {
+            bytes = FileUtils.readFileToByteArray(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<byte[]>(bytes,headers,HttpStatus.CREATED);
     }
 }
