@@ -29,8 +29,15 @@ import java.io.UnsupportedEncodingException;
 
 @Controller
 public class FileTransfer {
+    @RequestMapping(value = "/")
+    public String redirect()
+    {
+        System.out.println("run Redirect");
+        return "redirect:xmind2xls";//将主页重定向到上传xmind页面
+    }
+
     @RequestMapping(value = "xmind2xls")
-    public ModelAndView addParam()
+    public ModelAndView homePage()
     {
         System.out.println("run xmind2xls");
         ModelAndView mav = new ModelAndView("xmind2xls");
@@ -90,6 +97,32 @@ public class FileTransfer {
         ModelAndView mav = new ModelAndView("download");
         mav.addObject("filename", caseFileName);
         return mav;
+    }
+
+    @RequestMapping(value = "sampledownload")
+    public ResponseEntity<byte[]> sampleDownload(HttpServletRequest request, @RequestParam(value = "filename") String filename){
+        System.out.println("run sample download.do");
+        //String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
+        //设置下载文件的绝对路径
+        String absoluteFile = request.getSession().getServletContext().getRealPath("/myfile")+"\\"+filename;
+        File file = new File(absoluteFile);
+        //设置下载信息
+        HttpHeaders headers = new HttpHeaders();
+        String downloadFielName="";
+        try {
+            downloadFielName = new String(filename.getBytes("UTF-8"),"iso-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        headers.setContentDispositionFormData("attachment",downloadFielName);
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        byte[] bytes = new byte[]{};
+        try {
+            bytes = FileUtils.readFileToByteArray(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<byte[]>(bytes,headers,HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "download.do")

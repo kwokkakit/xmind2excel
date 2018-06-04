@@ -11,7 +11,7 @@
     <title>xmind转换成Excel案例</title>
 </head>
 <body>
-<p style="font-weight:bold">上传的文件不是xmind文件，请上传xmind文件</p>
+<h3>上传的文件不是xmind文件，请上传xmind文件</h3>
 <form action="/upload.do" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>请选择需要转换成excel的xmind文件</legend>

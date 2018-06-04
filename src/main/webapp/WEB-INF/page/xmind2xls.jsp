@@ -12,10 +12,14 @@
 </head>
 <body>
 <h3>请注意，上传的文件必须xmind文件</h3>
-<form action="/upload.do" method="post" enctype="multipart/form-data">
+<form action="/upload.do" method="post" enctype="multipart/form-data" target="_blank">
     <fieldset>
         <legend>请选择需要转换成excel的xmind文件</legend>
-        <input type="file" name="file"><input type="submit">
+        <input type="file" name="file" value="选择文件"><input type="submit" value="提交">
+        <br>
+        <a href="sampledownload?filename=sample.xmind" target="_blank">
+            下载xmind样例
+        </a>
     </fieldset>
 </form>
 </body>

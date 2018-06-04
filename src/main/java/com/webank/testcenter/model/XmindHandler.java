@@ -44,6 +44,7 @@ public class XmindHandler {
         //获取根主题的文字内容
         String rootTopicText = rootTopic.getTitleText();
         System.out.println("根主题："+rootTopicText);
+        /**
         try {
             //获取根主题备注内容
             INotes notes = rootTopic.getNotes();
@@ -52,6 +53,7 @@ public class XmindHandler {
         }catch (NullPointerException e){
             e.printStackTrace();
         }
+         */
         //获取根主题的子主题
         List<ITopic> itopics = rootTopic.getAllChildren();
         //遍历根主题的子主题
