@@ -89,8 +89,10 @@ public class XmindHandler {
             //子主题个数不大于2，还有一种可能是该子主题已经是案例名称级别
             catch (IndexOutOfBoundsException e) {
                 String caseName = rootTopic.getTitleText();                         //案例名称
-                //获取案例步骤
                 String caseStep = "";
+                String caseCondition = "";
+                String caseResult = "";
+                //获取案例步骤
                 try {
                     INotes notes = rootTopic.getNotes();
                     IPlainNotesContent newplainContent=(IPlainNotesContent)notes.getContent(INotes.PLAIN);
@@ -98,10 +100,14 @@ public class XmindHandler {
                 }catch (NullPointerException exception){
                     e.printStackTrace();
                 }
-                List<ITopic> caseConTopics = rootTopic.getAllChildren();
-                String caseCondition = caseConTopics.get(0).getTitleText();         //前置条件
-                List<ITopic> caseResultTopics = caseConTopics.get(0).getAllChildren();
-                String caseResult = caseResultTopics.get(0).getTitleText();         //预期结果
+                try {
+                    List<ITopic> caseConTopics = rootTopic.getAllChildren();
+                    caseCondition = caseConTopics.get(0).getTitleText();         //前置条件
+                    List<ITopic> caseResultTopics = caseConTopics.get(0).getAllChildren();
+                    caseResult = caseResultTopics.get(0).getTitleText();         //预期结果
+                }catch (IndexOutOfBoundsException exception) {
+                    exception.printStackTrace();
+                }
                 System.out.println("案例路径:" + casePath);                         //用例目录
                 System.out.println("案例名称:" + caseName);
                 System.out.println("前置条件:" + caseCondition);
