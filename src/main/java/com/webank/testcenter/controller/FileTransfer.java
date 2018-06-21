@@ -62,12 +62,11 @@ public class FileTransfer {
             ModelAndView mav = new ModelAndView("uploaderror");
             return mav;
         }
-        //String savePath = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\";
-        //
-        String savePath = request.getSession().getServletContext().getRealPath("/myfile");
-        System.out.println("当前程序运行路径："+request.getSession().getServletContext().getRealPath("/myfile"));
+
+        String savePath = request.getSession().getServletContext().getRealPath("/myXmind");
+        System.out.println("当前程序运行路径：" + request.getSession().getServletContext().getRealPath("/myXmind"));
         String saveFileName = uploadFileName.substring(0, uploadFileName.lastIndexOf(".")) + "_" + timestamp + "." + fileType;
-        String uploadFile = savePath+"\\"+saveFileName;
+        String uploadFile = savePath + "/" + saveFileName;
         File dirs = new File(savePath);
         if (!dirs.exists()) {
             dirs.mkdirs();
@@ -82,14 +81,13 @@ public class FileTransfer {
         //将xmind转换成excel
         //结果excel文件
         String caseFileName = uploadFileName.substring(0, uploadFileName.lastIndexOf("."))+"_"+timestamp+".xls";
-        String caseResultFile = savePath+"\\"+uploadFileName.substring(0, uploadFileName.lastIndexOf("."))+"_"+timestamp+".xls";
+        String caseResultFile = savePath + "/" + uploadFileName.substring(0, uploadFileName.lastIndexOf(".")) + "_" + timestamp + ".xls";
         ExcelHandler resultExcelHandler = new ExcelHandler(caseResultFile);
         resultExcelHandler.ExcelHandler();
 
         String uploadXmindFile = uploadFile;
         System.out.println("上传的xmind文件是："+uploadXmindFile);
 
-        //String xmindFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\sample.xmind";
         XmindHandler xmindHandler = new XmindHandler(uploadXmindFile);
         xmindHandler.xmind2Excel(resultExcelHandler);
 
@@ -102,9 +100,9 @@ public class FileTransfer {
     @RequestMapping(value = "sampledownload")
     public ResponseEntity<byte[]> sampleDownload(HttpServletRequest request, @RequestParam(value = "filename") String filename){
         System.out.println("run sample download.do");
-        //String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
+
         //设置下载文件的绝对路径
-        String absoluteFile = request.getSession().getServletContext().getRealPath("/myfile")+"\\"+filename;
+        String absoluteFile = request.getSession().getServletContext().getRealPath("/myXmind") + "/" + filename;
         File file = new File(absoluteFile);
         //设置下载信息
         HttpHeaders headers = new HttpHeaders();
@@ -128,9 +126,9 @@ public class FileTransfer {
     @RequestMapping(value = "download.do")
     public ResponseEntity<byte[]> download(HttpServletRequest request, @RequestParam(value = "filename") String filename){
         System.out.println("run download.do");
-        //String absoluteFile = "D:\\00Work\\JavaWebProject\\xmind2xlsdemo\\myfile\\"+filename;
+
         //设置下载文件的绝对路径
-        String absoluteFile = request.getSession().getServletContext().getRealPath("/myfile")+"\\"+filename;
+        String absoluteFile = request.getSession().getServletContext().getRealPath("/myXmind") + "/" + filename;
         File file = new File(absoluteFile);
         //设置下载信息
         HttpHeaders headers = new HttpHeaders();
