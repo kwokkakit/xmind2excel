@@ -13,7 +13,7 @@
     </bean>
     <!--用于文件上传定义的解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="5242880"></property>
+        <property name="maxUploadSize" value="10485760"></property>
         <property name="maxInMemorySize" value="4096"></property>
         <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
