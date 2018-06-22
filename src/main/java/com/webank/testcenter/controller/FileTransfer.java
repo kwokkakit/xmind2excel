@@ -54,7 +54,7 @@ public class FileTransfer {
         long timestamp = System.currentTimeMillis();
         //获取上传的文件名字
         String uploadFileName = file.getOriginalFilename();
-        String fileType = uploadFileName.substring(uploadFileName.lastIndexOf(".")+1);
+        String fileType = uploadFileName.substring(uploadFileName.lastIndexOf(".") + 1);
         System.out.println("上传的文件格式："+fileType);
         //上传的文件格式必须为xmind
         if (!fileType.equals("xmind")){

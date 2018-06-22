@@ -6,39 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eb2e455-dc99-411e-b7b4-6b6532d94dd2" name="Default" comment="1. 切换Spring版本为4.3.17&#10;2. 修改上传路径为Linux格式">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/xmind2xlsdemo.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xmind2xlsdemo.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/webank/testcenter/controller/FileTransfer.class" afterPath="$PROJECT_DIR$/target/classes/com/webank/testcenter/controller/FileTransfer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/webank/testcenter/model/ExcelHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/webank/testcenter/model/ExcelHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/webank/testcenter/model/XmindHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/webank/testcenter/model/XmindHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/controller/FileTransfer.class" afterPath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/controller/FileTransfer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/model/ExcelHandler.class" afterPath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/model/ExcelHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/model/XmindHandler.class" afterPath="$PROJECT_DIR$/target/xmind2xlsdemo/WEB-INF/classes/com/webank/testcenter/model/XmindHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/download.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/download.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/uploaderror.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/uploaderror.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/xmind2xls.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/xmind2xls.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xmind2xlsdemo/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/xmind2xlsdemo/META-INF/MANIFEST.MF" />
-    </list>
+    <list default="true" id="3eb2e455-dc99-411e-b7b4-6b6532d94dd2" name="Default" comment="1. 切换Spring版本为4.3.17&#10;2. 修改上传路径为Linux格式" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,30 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileTransfer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/webank/testcenter/controller/FileTransfer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xmind2xls.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/xmind2xls.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -100,11 +45,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webank/testcenter/controller/FileTransfer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/download.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/uploaderror.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/xmind2xls.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webank/testcenter/controller/FileTransfer.java" />
       </list>
     </option>
   </component>
@@ -963,7 +908,7 @@
       <workItem from="1528191639124" duration="1577000" />
       <workItem from="1529572675297" duration="5000" />
       <workItem from="1529572853688" duration="721000" />
-      <workItem from="1529573747296" duration="10065000" />
+      <workItem from="1529573747296" duration="10223000" />
     </task>
     <task id="LOCAL-00001" summary="1. 切换Spring版本为4.3.17&#10;2. 修改上传路径为Linux格式">
       <created>1529584851067</created>
@@ -976,7 +921,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12368000" />
+    <option name="totallyTimeSpent" value="12526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1362" y="-4" width="1928" height="1088" extended-state="6" />
@@ -1172,21 +1117,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webank/testcenter/controller/FileTransfer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="134" column="35" lean-forward="true" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/xmind2xls.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webank/testcenter/controller/FileTransfer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
