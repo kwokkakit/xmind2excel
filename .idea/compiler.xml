@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xmind2xls" />
         <module name="xmind2xlsdemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xmind2xls" target="1.7" />
+      <module name="xmind2xlsdemo" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

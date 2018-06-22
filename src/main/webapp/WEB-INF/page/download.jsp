@@ -12,7 +12,7 @@
 </head>
 <body>
 <h3>转换成功！请点击下载Excel案例</h3>
-<a href="download.do?filename=${filename}">
+<a href="/xmind2xls/download.do?filename=${filename}">
     ${filename}
 </a>
 </body>
