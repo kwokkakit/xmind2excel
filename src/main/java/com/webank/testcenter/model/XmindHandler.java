@@ -82,7 +82,7 @@ public class XmindHandler {
         else {
             //如果子主题个数不大于2，有两种可能，第一种是该业务场景分类只有1类，所以用try去尝试
             try {
-                rootTopic.getAllChildren().get(0).getAllChildren().get(0).getAllChildren().get(0);
+                rootTopic.getAllChildren().get(0).getAllChildren().get(0).getAllChildren().get(0).getAllChildren().get(0);;
                 String updatePath = casePath +"-"+rootTopic.getTitleText();
                 topicRecursion(resultExcelHandler,rootTopic.getAllChildren().get(0),updatePath);
             }
@@ -93,6 +93,7 @@ public class XmindHandler {
                 String caseCondition = "";
                 String caseResult = "";
                 //获取案例步骤
+                /*
                 try {
                     INotes notes = rootTopic.getNotes();
                     IPlainNotesContent newplainContent=(IPlainNotesContent)notes.getContent(INotes.PLAIN);
@@ -100,10 +101,13 @@ public class XmindHandler {
                 }catch (NullPointerException exception){
                     e.printStackTrace();
                 }
+                */
                 try {
                     List<ITopic> caseConTopics = rootTopic.getAllChildren();
                     caseCondition = caseConTopics.get(0).getTitleText();         //前置条件
-                    List<ITopic> caseResultTopics = caseConTopics.get(0).getAllChildren();
+                    List<ITopic> caseStepTopics = caseConTopics.get(0).getAllChildren();
+                    caseStep = caseStepTopics.get(0).getTitleText();  //执行步骤
+                    List<ITopic> caseResultTopics = caseStepTopics.get(0).getAllChildren();
                     caseResult = caseResultTopics.get(0).getTitleText();         //预期结果
                 }catch (IndexOutOfBoundsException exception) {
                     exception.printStackTrace();

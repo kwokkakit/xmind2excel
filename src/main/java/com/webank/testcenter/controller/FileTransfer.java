@@ -29,13 +29,14 @@ import java.io.UnsupportedEncodingException;
 
 @Controller
 public class FileTransfer {
+    /*
     @RequestMapping(value = "/")
     public String redirect()
     {
         System.out.println("run redirect");
         return "redirect:xmind2xls";//将主页重定向到上传xmind页面
     }
-
+    */
     @RequestMapping(value = "xmind2xls")
     public ModelAndView homePage()
     {
