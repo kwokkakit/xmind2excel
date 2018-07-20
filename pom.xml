@@ -75,10 +75,38 @@
       <artifactId>commons-fileupload</artifactId>
       <version>1.3.3</version>
     </dependency>
+    <!--配置服务器返回json报文需用的包-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.46</version>
+    </dependency>
+    <!--读写.xls格式的excel-->
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>3.16</version>
+    </dependency>
+      <!--log4j日志打印-->
+
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.7.5</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>1.7.25</version>
+      </dependency>
+    <!--解析xmind API-->
+    <dependency>
+      <groupId>org.xmind.core</groupId>
+      <artifactId>xmindcore</artifactId>
+      <version>3.7.6</version>
+      <scope>system</scope>
+      <systemPath>D:\00Work\JavaWebProject\xmind2xls\lib\org.xmind.core.jar</systemPath>
     </dependency>
   </dependencies>
 

@@ -88,7 +88,7 @@ public class ExcelHandler {
         HSSFSheet sheet = workbook.getSheetAt(0);
         int lastRowNum = sheet.getLastRowNum();
         //RowNum从0开始的
-        System.out.println("lastRowNum:"+lastRowNum);
+        //System.out.println("lastRowNum:"+lastRowNum);
         //在已有的行数上新增一行案例
         HSSFRow currentRow = sheet.createRow(lastRowNum+1);
         String[] caseInfoList = {casePath,caseName,caseCondition,caseStep,caseResult};

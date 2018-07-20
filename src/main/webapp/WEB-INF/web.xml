@@ -42,7 +42,14 @@
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
+  <!--支持HTML页面-->
+  <servlet-mapping>
+    <servlet-name>jsp</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+
   <welcome-file-list>
-    <welcome-file>/WEB-INF/page/xmind2xls.jsp</welcome-file>
+    <welcome-file>/WEB-INF/page/index.html</welcome-file>
   </welcome-file-list>
 </web-app>
