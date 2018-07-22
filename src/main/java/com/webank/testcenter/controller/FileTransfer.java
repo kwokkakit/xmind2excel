@@ -35,8 +35,8 @@ import java.util.Map;
 @Controller
 public class FileTransfer {
 
-    //public static String savePath = "D:\\00Work\\upload";
-    public static String savePath = "/tmp/xmind2xls";
+    //public static final String savePath = "D:\\00Work\\upload";
+    public static final String savePath = "/tmp/xmind2xls";
     private org.slf4j.Logger logger=LoggerFactory.getLogger(getClass());
 
     /**
@@ -75,7 +75,12 @@ public class FileTransfer {
         String uploadFile = savePath + "/" + saveFileName;
         File dirs = new File(savePath);
         if (!dirs.exists()) {
-            dirs.mkdirs();
+            try {
+                dirs.mkdirs();
+            }catch (Exception e){
+                e.printStackTrace();
+                flag = false;
+            }
         }
         //解析文件上传的IO流，同时完成将文件保存到服务器的操作
         File fileHandler = new File(dirs, saveFileName);
